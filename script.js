@@ -1,14 +1,16 @@
 /** @type { HTMLCanvasElement } */
 // The above JS doc type declares the canvas el so intellisense works :).
 
+"use strict";
+
 const canvas = document.getElementById("canvas");
 const gl = canvas.getContext("webgl2");
 
 if (!gl) console.error("No WebGl2 available");
 
 const vertexData = [
-    0, 1, 0,
-    1, -1, 0,
+     0,  1, 0,
+     1, -1, 0,
     -1, -1, 0
 ];
 
