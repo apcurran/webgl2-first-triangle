@@ -9,15 +9,15 @@ const gl = canvas.getContext("webgl2");
 if (!gl) console.error("No WebGl2 available");
 
 const vertexData = [
-     0,  1, 0,
-     1, -1, 0,
-    -1, -1, 0
+     0,  1,  0,
+     1, -1,  0,
+    -1, -1,  0
 ];
 
 const colorData = [
-    1, 0, 0, // Vertex 1 color
-    0, 1, 0, // Vertex 2 color
-    0, 0, 1  // Vertex 3 color
+     1,  0,  0, // Vertex 1 color
+     0,  1,  0, // Vertex 2 color
+     0,  0,  1  // Vertex 3 color
 ];
 
 const positionBuffer = gl.createBuffer();
@@ -51,7 +51,7 @@ const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
 
 gl.shaderSource(fragmentShader, `
     precision mediump float;
-    
+
     varying vec3 vColor;
 
     void main()
